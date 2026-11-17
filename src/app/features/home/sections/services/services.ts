@@ -117,7 +117,7 @@ import { RevealDirective } from '../../../../shared/reveal.directive';
     }
     @media (max-width: 620px) {
       .services {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
       }
       .service {
         padding: 22px;

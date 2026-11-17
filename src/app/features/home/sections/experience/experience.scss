@@ -1,0 +1,146 @@
+:host {
+  display: block;
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 220px;
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #6366f1, #22d3ee 45%, var(--border) 100%);
+  }
+}
+
+.entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 196px minmax(0, 1fr);
+  gap: 48px;
+
+  & + & {
+    margin-top: 22px;
+  }
+}
+
+.entry__dot {
+  position: absolute;
+  top: 26px;
+  left: 214px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+
+.entry--current .entry__dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.22);
+}
+
+.entry__when {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 20px;
+  text-align: right;
+}
+
+.entry__period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.entry__location {
+  color: var(--text-faint);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.entry__card {
+  padding: 24px 28px;
+
+  &:hover {
+    border-color: var(--border-strong);
+  }
+}
+
+.entry__head h3 {
+  font-size: 1.2rem;
+}
+
+.entry__company {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.entry__intro {
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 0.97rem;
+}
+
+.entry__list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+
+  li::marker {
+    color: var(--accent);
+  }
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 859.98px) {
+  .timeline::before {
+    left: 6px;
+  }
+
+  .entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding-left: 32px;
+  }
+
+  .entry__dot {
+    top: 4px;
+    left: 0;
+  }
+
+  .entry__when {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .entry__card {
+    padding: 20px;
+  }
+}

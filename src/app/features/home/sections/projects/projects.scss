@@ -182,7 +182,7 @@
 
 @media (max-width: 899.98px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -192,7 +192,7 @@
   }
 
   .project__highlights {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .project__actions .btn {

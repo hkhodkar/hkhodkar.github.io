@@ -1,0 +1,131 @@
+:host {
+  display: block;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(32px, 6vw, 72px);
+  border-radius: 28px;
+  border: 1px solid var(--border-strong);
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(34, 211, 238, 0.12), transparent 55%),
+    radial-gradient(90% 120% at 0% 100%, rgba(99, 102, 241, 0.16), transparent 55%),
+    var(--surface);
+}
+
+.panel__glow {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 85% 10%, #000, transparent 75%);
+  mask-image: radial-gradient(ellipse 60% 70% at 85% 10%, #000, transparent 75%);
+  pointer-events: none;
+}
+
+.panel__content {
+  position: relative;
+  max-width: 760px;
+
+  h2 {
+    font-size: clamp(2rem, 4.6vw, 3.2rem);
+  }
+}
+
+.panel__lead {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+}
+
+.email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 32px;
+}
+
+.email__address {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3.4vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+
+  app-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--accent);
+  }
+
+  &:hover span {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 6px;
+  }
+}
+
+.email__copy {
+  min-width: 128px;
+
+  &.is-copied {
+    border-color: var(--success);
+    color: var(--success);
+  }
+}
+
+.email__status {
+  min-height: 1.6em;
+  margin-top: 8px;
+  color: var(--success);
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.panel__location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  color: var(--text-faint);
+  font-size: 0.92rem;
+
+  app-icon {
+    width: 17px;
+    height: 17px;
+    color: var(--accent);
+  }
+}
+
+@media (max-width: 540px) {
+  .email__address {
+    font-size: 1.05rem;
+
+    app-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .actions .btn {
+    flex: 1 1 calc(50% - 6px);
+  }
+
+  .actions .btn--primary {
+    flex-basis: 100%;
+  }
+}

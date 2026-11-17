@@ -1,0 +1,63 @@
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="panel" appReveal>
+      <div class="panel__glow" aria-hidden="true"></div>
+      <div class="panel__content">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Have a project in mind? <span class="gradient-text">Let's talk.</span></h2>
+        <p class="panel__lead">
+          Tell me about your product, timeline and goals. I'm available for freelance Angular and full-stack
+          (Angular + FastAPI) work &mdash; from a single feature to a full build.
+        </p>
+
+        <div class="email">
+          <a class="email__address" [href]="'mailto:' + profile.email">
+            <app-icon name="mail" />
+            <span>{{ profile.email }}</span>
+          </a>
+          <button
+            type="button"
+            class="btn btn--ghost btn--sm email__copy"
+            [class.is-copied]="copyState() === 'copied'"
+            (click)="copyEmail()"
+            [attr.aria-label]="'Copy email address ' + profile.email"
+          >
+            @if (copyState() === 'copied') {
+              <app-icon name="check" /> Copied!
+            } @else {
+              <app-icon name="copy" /> Copy email
+            }
+          </button>
+        </div>
+        <p class="email__status" role="status" aria-live="polite">
+          @switch (copyState()) {
+            @case ('copied') {
+              Email address copied to your clipboard.
+            }
+            @case ('failed') {
+              Couldn't copy automatically &mdash; please copy {{ profile.email }} manually.
+            }
+          }
+        </p>
+
+        <div class="actions">
+          <a class="btn btn--primary" [href]="'mailto:' + profile.email"><app-icon name="mail" /> Email me</a>
+          @if (upworkUrl) {
+            <a class="btn btn--ghost" [href]="upworkUrl" target="_blank" rel="noopener">
+              <app-icon name="briefcase" /> Hire me on Upwork
+            </a>
+          }
+          <a class="btn btn--ghost" [href]="profile.linkedin" target="_blank" rel="noopener">
+            <app-icon name="linkedin" /> LinkedIn
+          </a>
+          <a class="btn btn--ghost" [href]="profile.github" target="_blank" rel="noopener">
+            <app-icon name="github" /> GitHub
+          </a>
+          <a class="btn btn--ghost" [href]="profile.cv" download><app-icon name="download" /> Download CV</a>
+        </div>
+
+        <p class="panel__location"><app-icon name="map-pin" /> Based in {{ profile.location }} &middot; working remotely</p>
+      </div>
+    </div>
+  </div>
+</section>
