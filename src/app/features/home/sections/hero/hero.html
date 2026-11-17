@@ -1,0 +1,69 @@
+<section id="top" class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="badge">
+          <span class="badge__dot" aria-hidden="true"></span>
+          Available for freelance
+        </p>
+        <h1 id="hero-title" class="hero__title">
+          {{ profile.name }}
+          <span class="hero__role gradient-text">{{ profile.title }}</span>
+        </h1>
+        <p class="hero__pitch">
+          I build fast, reliable Angular apps &mdash; dashboards, admin panels and complex forms &mdash; with clean,
+          tested code your team can keep shipping on.
+        </p>
+        <p class="hero__meta">
+          <app-icon name="map-pin" />
+          <span>{{ profile.location }} &middot; 7+ years &middot; Open to remote projects</span>
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="/#projects" (click)="sectionNav.handleClick($event, 'projects')">
+            View projects <app-icon name="arrow-right" />
+          </a>
+          <a class="btn btn--ghost" [href]="profile.cv" download>
+            <app-icon name="download" /> Download CV
+          </a>
+          <a class="btn btn--ghost" href="/#contact" (click)="sectionNav.handleClick($event, 'contact')">
+            <app-icon name="mail" /> Contact
+          </a>
+          @if (upworkUrl) {
+            <a class="btn btn--ghost" [href]="upworkUrl" target="_blank" rel="noopener">
+              <app-icon name="briefcase" /> Hire me on Upwork
+            </a>
+          }
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="code-card">
+          <div class="code-card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="code-card__file">hatef.ts</span>
+          </div>
+          <pre class="code-card__body"><code><span class="k">const</span> <span class="v">hatef</span> = &#123;
+  <span class="p">role</span>: <span class="s">'Senior Angular Dev'</span>,
+  <span class="p">experience</span>: <span class="s">'7+ years'</span>,
+  <span class="p">angular</span>: <span class="s">'v11 → v21'</span>,
+  <span class="p">stack</span>: [<span class="s">'TypeScript'</span>, <span class="s">'RxJS'</span>, <span class="s">'NgRx'</span>],
+  <span class="p">testing</span>: [<span class="s">'Playwright'</span>, <span class="s">'Cypress'</span>],
+  <span class="p">domains</span>: [<span class="s">'Healthcare'</span>, <span class="s">'Logistics'</span>],
+  <span class="p">openToFreelance</span>: <span class="b">true</span>,
+&#125;;</code></pre>
+        </div>
+        <div class="float-chip float-chip--one"><span class="float-chip__dot"></span>Signals · OnPush · SSR</div>
+        <div class="float-chip float-chip--two"><app-icon name="check" />Tested with Playwright</div>
+      </div>
+    </div>
+
+    <ul class="stats" aria-label="Highlights">
+      @for (stat of stats; track stat.value; let i = $index) {
+        <li class="stat" appReveal [revealDelay]="i * 70">
+          <strong class="stat__value">{{ stat.value }}</strong>
+          <span class="stat__label">{{ stat.label }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
