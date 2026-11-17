@@ -1,0 +1,84 @@
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <div class="container">
+    <header class="section-head" appReveal>
+      <p class="eyebrow">Projects</p>
+      <h2 id="projects-title">Featured projects</h2>
+      <p>Live, open-source Angular apps you can click through right now &mdash; with the full source code on GitHub.</p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Filter projects by technology" appReveal>
+      @for (tag of tags; track tag) {
+        <button
+          type="button"
+          class="filter"
+          [class.is-active]="selected() === tag"
+          [attr.aria-pressed]="selected() === tag"
+          (click)="select(tag)"
+        >
+          {{ tag }}
+        </button>
+      }
+    </div>
+
+    <p class="sr-only" aria-live="polite">
+      Showing {{ visible().length }} {{ visible().length === 1 ? 'project' : 'projects' }}
+    </p>
+
+    <ul class="grid">
+      @for (project of visible(); track project.slug; let i = $index) {
+        <li class="card project" appReveal [revealDelay]="(i % 2) * 90">
+          <a
+            class="project__shot"
+            [href]="project.demoUrl"
+            target="_blank"
+            rel="noopener"
+            [attr.aria-label]="'Open the ' + project.title + ' live demo'"
+            tabindex="-1"
+          >
+            <img
+              [src]="image(project)"
+              [alt]="'Screenshot of the ' + project.title + ' app'"
+              width="1200"
+              height="750"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="project__overlay" aria-hidden="true">
+              <span class="project__overlay-label">Open live demo <app-icon name="external" /></span>
+            </span>
+          </a>
+          <div class="project__body">
+            <h3>{{ project.title }}</h3>
+            <p class="project__summary">{{ project.summary }}</p>
+            <ul class="project__highlights">
+              @for (item of project.highlights; track item) {
+                <li><app-icon name="check" />{{ item }}</li>
+              }
+            </ul>
+            <ul class="chip-list project__tags" aria-label="Technologies">
+              @for (tag of project.tags; track tag) {
+                <li class="chip">{{ tag }}</li>
+              }
+            </ul>
+            <div class="project__actions">
+              <a class="btn btn--primary btn--sm" [href]="project.demoUrl" target="_blank" rel="noopener">
+                Live demo <app-icon name="external" />
+              </a>
+              <a class="btn btn--ghost btn--sm" [href]="project.codeUrl" target="_blank" rel="noopener">
+                <app-icon name="github" /> Code
+              </a>
+            </div>
+          </div>
+        </li>
+      } @empty {
+        <li class="empty">No projects with this technology yet.</li>
+      }
+    </ul>
+
+    <div class="more" appReveal>
+      <a class="btn btn--ghost" [href]="github" target="_blank" rel="noopener">
+        <app-icon name="github" /> More on GitHub <app-icon name="arrow-right" />
+      </a>
+    </div>
+  </div>
+</section>

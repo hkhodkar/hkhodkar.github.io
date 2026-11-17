@@ -4,14 +4,16 @@ import { ScrollSpyService } from '../../core/scroll-spy.service';
 import { SeoService } from '../../core/seo.service';
 import { SECTION_LINKS } from '../../core/layout/nav-links';
 import { Hero } from './sections/hero/hero';
+import { Projects } from './sections/projects/projects';
 import { Services } from './sections/services/services';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, Services],
+  imports: [Hero, Services, Projects],
   template: `
     <app-hero />
     <app-services />
+    <app-projects />
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

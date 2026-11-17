@@ -1,0 +1,58 @@
+/**
+ * Portfolio projects. To add one, append an entry below and put a screenshot at
+ * public/projects/<slug>.webp (16:10, about 1200x750). See README for details.
+ */
+export interface Project {
+  /** Repository name. Also used for the screenshot file name. */
+  slug: string;
+  title: string;
+  /** One or two sentences shown on the card. */
+  summary: string;
+  /** Three to four short feature bullets. */
+  highlights: string[];
+  /** Technologies; each tag becomes a filter chip. */
+  tags: string[];
+  demoUrl: string;
+  codeUrl: string;
+  /** ISO date (YYYY-MM-DD); newer projects are listed first. */
+  added: string;
+}
+
+export const PROJECTS: Project[] = [
+  {
+    slug: 'invoice-generator',
+    title: 'Invoice Generator',
+    summary:
+      'Create professional invoices with a live preview, export them to PDF and track their status, all in the browser with no sign-up.',
+    highlights: [
+      'Live preview that updates on every keystroke',
+      'Text-based A4 PDF export with jsPDF',
+      'Draft / sent / paid / overdue statuses',
+      'Local persistence with localStorage',
+    ],
+    tags: ['Angular 21', 'Signals', 'jsPDF', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/invoice-generator/',
+    codeUrl: 'https://github.com/hkhodkar/invoice-generator',
+    added: '2026-11-16',
+  },
+  {
+    slug: 'expense-tracker',
+    title: 'Expense Tracker',
+    summary:
+      'A personal finance dashboard to track transactions, set monthly budgets per category and see where the money goes.',
+    highlights: [
+      'Transactions with filters, search and pagination',
+      'Category budgets with progress warnings',
+      'Chart.js dashboard and CSV import / export',
+      'Dark mode that remembers your choice',
+    ],
+    tags: ['Angular 21', 'Signals', 'Chart.js', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/expense-tracker/',
+    codeUrl: 'https://github.com/hkhodkar/expense-tracker',
+    added: '2026-11-16',
+  },
+];
+
+export function projectImage(project: Project): string {
+  return `/projects/${project.slug}.webp`;
+}
