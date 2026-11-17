@@ -1,0 +1,44 @@
+@media print {
+  :root,
+  :root[data-theme='dark'],
+  :root[data-theme='light'] {
+    color-scheme: light;
+    --bg: #fff;
+    --surface: #fff;
+    --surface-solid: #fff;
+    --border: #d9dde6;
+    --border-strong: #c3c9d6;
+    --text: #0b1220;
+    --text-muted: #374151;
+    --text-faint: #4b5563;
+    --accent: #3730a3;
+    --chip-bg: #fff;
+  }
+
+  body {
+    background: #fff;
+    font-size: 10.5pt;
+  }
+
+  .no-print,
+  app-navbar,
+  app-footer,
+  .bg-decor,
+  .skip-link {
+    display: none !important;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .gradient-text {
+    background: none;
+    color: var(--text);
+  }
+
+  .js .reveal:not(.is-visible) {
+    opacity: 1;
+    transform: none;
+  }
+}

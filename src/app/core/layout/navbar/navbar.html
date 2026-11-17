@@ -1,0 +1,63 @@
+<header class="nav" [class.nav--scrolled]="scrolled() || menuOpen()">
+  <div class="nav__inner container">
+    <a class="brand" href="/" (click)="goTo($event, 'top')" aria-label="Hatef Khodkar, back to top">
+      <span class="brand__mark" aria-hidden="true">HK</span>
+      <span class="brand__name">Hatef Khodkar</span>
+    </a>
+
+    <nav id="primary-nav" class="nav__menu" [class.nav__menu--open]="menuOpen()" aria-label="Primary">
+      <ul class="nav__links">
+        @for (link of links; track link.id) {
+          <li>
+            <a
+              class="nav__link"
+              [href]="'/#' + link.id"
+              [class.is-active]="spy.active() === link.id"
+              [attr.aria-current]="spy.active() === link.id ? 'location' : null"
+              (click)="goTo($event, link.id)"
+              >{{ link.label }}</a
+            >
+          </li>
+        }
+        <li>
+          <a
+            class="nav__link"
+            routerLink="/resume"
+            routerLinkActive="is-active"
+            ariaCurrentWhenActive="page"
+            (click)="closeMenu()"
+            >Resume</a
+          >
+        </li>
+      </ul>
+      <a class="btn btn--primary nav__menu-cta" href="/#contact" (click)="goTo($event, 'contact')">
+        Hire me <app-icon name="arrow-right" />
+      </a>
+    </nav>
+
+    <div class="nav__actions">
+      <button
+        type="button"
+        class="icon-btn theme-toggle"
+        (click)="theme.toggle()"
+        [attr.aria-label]="theme.theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+        [attr.title]="theme.theme() === 'dark' ? 'Light theme' : 'Dark theme'"
+      >
+        <app-icon class="theme-toggle__sun" name="sun" />
+        <app-icon class="theme-toggle__moon" name="moon" />
+      </button>
+      <a class="btn btn--primary btn--sm nav__cta" href="/#contact" (click)="goTo($event, 'contact')">Hire me</a>
+      <button
+        #menuButton
+        type="button"
+        class="icon-btn nav__toggle"
+        aria-controls="primary-nav"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+        (click)="toggleMenu()"
+      >
+        <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+      </button>
+    </div>
+  </div>
+</header>
