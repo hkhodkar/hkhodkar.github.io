@@ -144,3 +144,10 @@
     padding: 20px;
   }
 }
+
+// Keep the timeline scannable on phones; the full list lives on the resume page.
+@media (max-width: 620px) {
+  .entry__list li:nth-child(n + 3) {
+    display: none;
+  }
+}
