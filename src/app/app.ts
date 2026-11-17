@@ -38,6 +38,7 @@ import { ThemeService } from './core/theme.service';
       position: absolute;
       inset: 0 0 auto;
       height: 1100px;
+      max-height: 100%;
       overflow: hidden;
       pointer-events: none;
     }

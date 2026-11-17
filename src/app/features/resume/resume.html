@@ -1,0 +1,99 @@
+<div class="resume-page">
+  <div class="container">
+    <div class="toolbar no-print">
+      <p class="toolbar__note">Web version of my CV. The PDF has the same content in a print layout.</p>
+      <div class="toolbar__actions">
+        <button type="button" class="btn btn--ghost btn--sm" (click)="print()"><app-icon name="printer" /> Print</button>
+        <a class="btn btn--primary btn--sm" [href]="profile.cv" download><app-icon name="download" /> Download PDF</a>
+      </div>
+    </div>
+
+    <article class="resume" aria-labelledby="resume-name">
+      <header class="resume__header">
+        <div>
+          <h1 id="resume-name">{{ profile.name }}</h1>
+          <p class="resume__role">{{ profile.role }}</p>
+        </div>
+        <ul class="contacts">
+          <li><app-icon name="map-pin" />{{ profile.location }}</li>
+          <li>
+            <app-icon name="mail" /><a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+          </li>
+          <li>
+            <app-icon name="linkedin" /><a [href]="profile.linkedin" target="_blank" rel="noopener"
+              >linkedin.com/in/hatef-khodkar</a
+            >
+          </li>
+          <li>
+            <app-icon name="github" /><a [href]="profile.github" target="_blank" rel="noopener">github.com/hkhodkar</a>
+          </li>
+          <li><app-icon name="home" /><a href="/">{{ siteHost }}</a></li>
+        </ul>
+      </header>
+
+      <section class="block" aria-labelledby="r-summary">
+        <h2 id="r-summary">Professional Summary</h2>
+        <p class="summary">{{ summary }}</p>
+      </section>
+
+      <section class="block" aria-labelledby="r-skills">
+        <h2 id="r-skills">Core Skills</h2>
+        <dl class="skills">
+          @for (group of skillGroups; track group.name) {
+            <div class="skills__row">
+              <dt>{{ group.name }}</dt>
+              <dd>{{ group.skills.join(', ') }}</dd>
+            </div>
+          }
+        </dl>
+      </section>
+
+      <section class="block" aria-labelledby="r-experience">
+        <h2 id="r-experience">Professional Experience</h2>
+        @for (role of roles; track role.company + role.period) {
+          <div class="job">
+            <div class="job__head">
+              <h3>{{ role.title }}</h3>
+              <span class="job__period">{{ role.period }}</span>
+            </div>
+            <p class="job__company">
+              {{ role.company }}@if (role.domain) { ({{ role.domain }})} · {{ role.location }}
+            </p>
+            @if (role.intro) {
+              <p class="job__intro">{{ role.intro }}</p>
+            }
+            <ul class="job__list">
+              @for (item of role.highlights; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </div>
+        }
+      </section>
+
+      <section class="block" aria-labelledby="r-projects">
+        <h2 id="r-projects">Selected Open-Source Projects</h2>
+        <ul class="projects">
+          @for (project of projects; track project.slug) {
+            <li>
+              <strong>{{ project.title }}</strong> – {{ project.summary }}
+              <span class="projects__links">
+                <a [href]="project.demoUrl" target="_blank" rel="noopener">Live demo</a> ·
+                <a [href]="project.codeUrl" target="_blank" rel="noopener">Code</a>
+              </span>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <section class="block" aria-labelledby="r-education">
+        <h2 id="r-education">Education</h2>
+        <div class="job__head">
+          <h3>{{ education.degree }}</h3>
+          <span class="job__period">{{ education.period }}</span>
+        </div>
+        <p class="job__company">{{ education.school }}</p>
+      </section>
+    </article>
+  </div>
+</div>
