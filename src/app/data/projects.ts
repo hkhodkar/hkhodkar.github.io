@@ -21,6 +21,21 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'crm-lite',
+    title: 'CRM Lite',
+    summary:
+      'A full-stack mini CRM with contacts, companies, a drag and drop deals pipeline, activity timelines and a KPI dashboard. Runs with one docker compose up.',
+    highlights: [
+      'Deals pipeline with drag and drop stage changes',
+      'Activity timeline for calls, emails, meetings and notes',
+      'Dashboard with pipeline value, win rate and charts',
+      'FastAPI with server-side filters, pytest, Docker and CI',
+    ],
+    tags: ['Angular 21', 'FastAPI', 'Python', 'SQLite', 'Docker'],
+    codeUrl: 'https://github.com/hkhodkar/crm-lite',
+    added: '2026-11-18',
+  },
+  {
     slug: 'kanban-task-board',
     title: 'Kanban Task Board',
     summary:
