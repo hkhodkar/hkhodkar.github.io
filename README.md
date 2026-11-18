@@ -47,7 +47,7 @@ public/       static files: CV PDF, project screenshots, favicons, og-image, sit
   summary: 'One or two sentences about what it does.',
   highlights: ['Feature one', 'Feature two', 'Feature three'],
   tags: ['Angular 21', 'Signals', 'SCSS'],   // each tag becomes a filter chip
-  demoUrl: 'https://hkhodkar.github.io/my-new-app/',
+  demoUrl: 'https://hkhodkar.github.io/my-new-app/', // optional, leave out if there is no hosted demo
   codeUrl: 'https://github.com/hkhodkar/my-new-app',
   added: '2026-11-20',                // newest projects are shown first
 },

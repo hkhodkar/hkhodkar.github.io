@@ -12,7 +12,8 @@ export interface Project {
   highlights: string[];
   /** Technologies; each tag becomes a filter chip. */
   tags: string[];
-  demoUrl: string;
+  /** Leave out for projects without a hosted demo (e.g. full-stack apps). */
+  demoUrl?: string;
   codeUrl: string;
   /** ISO date (YYYY-MM-DD); newer projects are listed first. */
   added: string;

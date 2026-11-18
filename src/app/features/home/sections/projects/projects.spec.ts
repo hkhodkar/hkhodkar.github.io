@@ -19,7 +19,9 @@ describe('Projects section', () => {
 
     expect(el.querySelectorAll('.project').length).toBe(PROJECTS.length);
     for (const project of PROJECTS) {
-      expect(el.querySelector(`a[href="${project.demoUrl}"]`)).toBeTruthy();
+      if (project.demoUrl) {
+        expect(el.querySelector(`a.btn[href="${project.demoUrl}"]`)).toBeTruthy();
+      }
       expect(el.querySelector(`a[href="${project.codeUrl}"]`)).toBeTruthy();
     }
     expect(chip(el, 'All').getAttribute('aria-pressed')).toBe('true');

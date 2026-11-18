@@ -8,7 +8,9 @@ describe('PROJECTS data', () => {
     for (const project of PROJECTS) {
       expect(project.title.trim()).not.toBe('');
       expect(project.tags.length).toBeGreaterThan(0);
-      expect(project.demoUrl).toMatch(/^https:\/\//);
+      if (project.demoUrl !== undefined) {
+        expect(project.demoUrl).toMatch(/^https:\/\//);
+      }
       expect(project.codeUrl).toBe(`https://github.com/hkhodkar/${project.slug}`);
       expect(project.added).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     }

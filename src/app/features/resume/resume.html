@@ -78,7 +78,9 @@
             <li>
               <strong>{{ project.title }}</strong> – {{ project.summary }}
               <span class="projects__links">
-                <a [href]="project.demoUrl" target="_blank" rel="noopener">Live demo</a> ·
+                @if (project.demoUrl) {
+                  <a [href]="project.demoUrl" target="_blank" rel="noopener">Live demo</a> ·
+                }
                 <a [href]="project.codeUrl" target="_blank" rel="noopener">Code</a>
               </span>
             </li>
