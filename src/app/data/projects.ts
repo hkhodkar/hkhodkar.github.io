@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     slug: 'crm-lite',
     title: 'CRM Lite',
     summary:
-      'A full-stack mini CRM with contacts, companies, a drag and drop deals pipeline, activity timelines and a KPI dashboard. Runs with one docker compose up.',
+      'A full-stack mini CRM with contacts, companies, a drag and drop deals pipeline, activity timelines and a KPI dashboard. The live demo runs on built-in sample data; the full stack runs with one docker compose up.',
     highlights: [
       'Deals pipeline with drag and drop stage changes',
       'Activity timeline for calls, emails, meetings and notes',
@@ -32,6 +32,7 @@ export const PROJECTS: Project[] = [
       'FastAPI with server-side filters, pytest, Docker and CI',
     ],
     tags: ['Angular 21', 'FastAPI', 'Python', 'SQLite', 'Docker'],
+    demoUrl: 'https://hkhodkar.github.io/crm-lite/',
     codeUrl: 'https://github.com/hkhodkar/crm-lite',
     added: '2026-11-18',
   },
