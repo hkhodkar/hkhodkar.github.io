@@ -20,6 +20,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'kanban-task-board',
+    title: 'Kanban Task Board',
+    summary:
+      'A kanban board for planning work: drag cards between columns and keep track of labels, due dates, assignees and checklists, with everything saved in the browser.',
+    highlights: [
+      'Drag and drop cards and columns with the Angular CDK',
+      'Card dialog with labels, assignee, due date and checklist',
+      'Search and filters with overdue and due-soon markers',
+      'Demo board, dark mode and a responsive phone layout',
+    ],
+    tags: ['Angular 21', 'Signals', 'Angular CDK', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/kanban-task-board/',
+    codeUrl: 'https://github.com/hkhodkar/kanban-task-board',
+    added: '2026-11-18',
+  },
+  {
     slug: 'invoice-generator',
     title: 'Invoice Generator',
     summary:
