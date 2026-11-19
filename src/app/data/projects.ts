@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'multi-step-form-wizard',
+    title: 'Multi-step Form Wizard',
+    summary:
+      'A form engine that turns a JSON schema into a multi-step wizard with typed reactive forms, conditional fields and steps, cross-field and async validation, a review step and draft autosave. Three example forms come with a live schema viewer.',
+    highlights: [
+      'Forms and steps built from JSON, including repeatable groups',
+      'Conditional fields and steps, cross-field and async validators',
+      'Accessible stepper, review step with edit links',
+      'Draft autosave with resume or start over',
+    ],
+    tags: ['Angular 21', 'Signals', 'Reactive Forms', 'RxJS'],
+    demoUrl: 'https://hkhodkar.github.io/multi-step-form-wizard/',
+    codeUrl: 'https://github.com/hkhodkar/multi-step-form-wizard',
+    added: '2026-11-19',
+  },
+  {
     slug: 'real-estate-listings',
     title: 'Real Estate Listings',
     summary:
