@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'job-board',
+    title: 'Job Board',
+    summary:
+      'A job board with 30 sample jobs from ten companies, filters kept in the URL and an apply form with a validated CV upload. Employers can post, edit and delete jobs with a live preview; saved jobs, applications and posts stay in the browser.',
+    highlights: [
+      'Eight filters plus sorting, synced to the URL',
+      'Apply form with drag and drop CV upload and file checks',
+      'Post-a-job form with salary range validation and live preview',
+      'Saved jobs and my applications pages',
+    ],
+    tags: ['Angular 21', 'Signals', 'Reactive Forms', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/job-board/',
+    codeUrl: 'https://github.com/hkhodkar/job-board',
+    added: '2026-11-19',
+  },
+  {
     slug: 'sales-analytics-dashboard',
     title: 'Sales Analytics Dashboard',
     summary:
