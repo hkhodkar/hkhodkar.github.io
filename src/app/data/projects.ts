@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'ecommerce-storefront',
+    title: 'E-commerce Storefront',
+    summary:
+      'A small online shop with 28 products across six categories, searchable and filterable through shareable URLs. Shoppers pick colors and sizes, manage a cart saved in the browser and finish a fully validated checkout with an order confirmation.',
+    highlights: [
+      'URL-driven catalog filters, search and sorting',
+      'Signals cart store with promo codes, synced across tabs',
+      'Typed checkout form with card, expiry and postal code checks',
+      'Product detail with color and size variants and related items',
+    ],
+    tags: ['Angular 21', 'Signals', 'Reactive Forms', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/ecommerce-storefront/',
+    codeUrl: 'https://github.com/hkhodkar/ecommerce-storefront',
+    added: '2026-11-19',
+  },
+  {
     slug: 'admin-users-table',
     title: 'Admin Users Table',
     summary:
