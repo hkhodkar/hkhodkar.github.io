@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'inventory-manager',
+    title: 'Inventory Manager',
+    summary:
+      'A full-stack inventory manager where stock is the sum of a movement ledger and can never go negative. Includes suppliers, low-stock alerts with one-click restock and reports with charts and CSV export. The live demo runs on built-in sample data; the full stack runs with docker compose.',
+    highlights: [
+      'Stock in, out and adjustment ledger with negative-stock protection',
+      'Low-stock alerts with suggested order quantities',
+      'Reports with Chart.js and CSV exports',
+      'FastAPI with pytest, parity tests, Docker and CI',
+    ],
+    tags: ['Angular 21', 'FastAPI', 'Python', 'SQLite', 'Docker', 'Chart.js'],
+    demoUrl: 'https://hkhodkar.github.io/inventory-manager/',
+    codeUrl: 'https://github.com/hkhodkar/inventory-manager',
+    added: '2026-11-19',
+  },
+  {
     slug: 'multi-step-form-wizard',
     title: 'Multi-step Form Wizard',
     summary:
