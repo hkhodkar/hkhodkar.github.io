@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'real-estate-listings',
+    title: 'Real Estate Listings',
+    summary:
+      'A property search app with 30 homes for sale across five UAE cities. Browse in a grid, list or map view, open a property with a photo gallery, amenities and a location map, contact the agent and keep favorites in the browser.',
+    highlights: [
+      'Filters and sort kept in the URL, shareable and reload-safe',
+      'Leaflet map with price markers, popups and auto-fit to results',
+      'Property page with full-screen gallery and contact form',
+      'Favorites saved in localStorage with undo',
+    ],
+    tags: ['Angular 21', 'Signals', 'Leaflet', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/real-estate-listings/',
+    codeUrl: 'https://github.com/hkhodkar/real-estate-listings',
+    added: '2026-11-19',
+  },
+  {
     slug: 'auth-starter',
     title: 'Auth Starter',
     summary:
