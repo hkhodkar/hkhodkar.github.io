@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'appointment-booking',
+    title: 'Appointment Booking',
+    summary:
+      'Online booking for a small clinic: clients pick a service, a specialist and a free time slot, and the team manages appointments in an admin table and a day/week agenda.',
+    highlights: [
+      'Calendar and time slots based on real staff availability',
+      'Validated booking form with confirmation and .ics export',
+      'Admin bookings table with filters, stats and edit dialog',
+      'Day and week agenda per specialist, dark mode, mobile layout',
+    ],
+    tags: ['Angular 21', 'Signals', 'Reactive Forms', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/appointment-booking/',
+    codeUrl: 'https://github.com/hkhodkar/appointment-booking',
+    added: '2026-11-19',
+  },
+  {
     slug: 'crm-lite',
     title: 'CRM Lite',
     summary:
