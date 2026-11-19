@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'auth-starter',
+    title: 'Auth Starter',
+    summary:
+      'A full-stack authentication starter: FastAPI issues short-lived JWT access tokens and rotating refresh tokens over Argon2-hashed passwords, and the Angular app uses a refreshing HTTP interceptor and role guards. The live demo runs on built-in sample data with 60-second tokens so you can watch a refresh happen.',
+    highlights: [
+      'Interceptor that refreshes once on 401 and retries queued requests',
+      'Rotating refresh tokens, reuse detection and server-side logout',
+      'Route guards and role-based UI for admin and user',
+      'Admin users page, profile and password change, pytest and CI',
+    ],
+    tags: ['Angular 21', 'FastAPI', 'Python', 'JWT', 'Docker'],
+    demoUrl: 'https://hkhodkar.github.io/auth-starter/',
+    codeUrl: 'https://github.com/hkhodkar/auth-starter',
+    added: '2026-11-19',
+  },
+  {
     slug: 'ecommerce-storefront',
     title: 'E-commerce Storefront',
     summary:
