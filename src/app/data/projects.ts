@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'sales-analytics-dashboard',
+    title: 'Sales Analytics Dashboard',
+    summary:
+      'An analytics dashboard over 18 months of sample orders with KPI cards and sparklines, Chart.js charts, date presets and a custom range compared with the previous period. Click a region or category to drill down to countries and products.',
+    highlights: [
+      'KPI cards with change vs previous period',
+      'Region and category drill-down with breadcrumbs',
+      'Filters in the URL, light and dark chart themes',
+      'Sortable top products table with CSV export',
+    ],
+    tags: ['Angular 21', 'Signals', 'Chart.js', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/sales-analytics-dashboard/',
+    codeUrl: 'https://github.com/hkhodkar/sales-analytics-dashboard',
+    added: '2026-11-19',
+  },
+  {
     slug: 'inventory-manager',
     title: 'Inventory Manager',
     summary:
