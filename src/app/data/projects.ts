@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'admin-users-table',
+    title: 'Admin Users Table',
+    summary:
+      'A user management screen for an admin console with server-side paging, sorting and filters, bulk actions and CSV export. The live demo runs on built-in sample data; the full stack runs with docker compose.',
+    highlights: [
+      'Server-side paging, multi-column sorting and filters',
+      'Shareable URLs for every search, filter and sort',
+      'Bulk activate, deactivate, change role and delete',
+      'FastAPI with CSV export, pytest, Docker and CI',
+    ],
+    tags: ['Angular 21', 'FastAPI', 'Python', 'SQLite', 'Docker'],
+    demoUrl: 'https://hkhodkar.github.io/admin-users-table/',
+    codeUrl: 'https://github.com/hkhodkar/admin-users-table',
+    added: '2026-11-19',
+  },
+  {
     slug: 'appointment-booking',
     title: 'Appointment Booking',
     summary:
