@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'url-shortener',
+    title: 'URL Shortener',
+    summary:
+      'A full-stack URL shortener with custom aliases checked as you type, expiry dates and downloadable QR codes. Every redirect records a click, and each link has a stats page with clicks over time, referrers, countries and devices for 7, 30 or 90 days.',
+    highlights: [
+      'Live alias availability check with reserved words',
+      'Per-link analytics charts with date ranges',
+      'QR code download and copy-to-clipboard',
+      'Links table with search, sort, edit and disable',
+    ],
+    tags: ['Angular 21', 'Signals', 'FastAPI', 'SQLite', 'Chart.js'],
+    demoUrl: 'https://hkhodkar.github.io/url-shortener/',
+    codeUrl: 'https://github.com/hkhodkar/url-shortener',
+    added: '2026-11-20',
+  },
+  {
     slug: 'saas-landing-page',
     title: 'SaaS Landing Page',
     summary:
