@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'saas-landing-page',
+    title: 'SaaS Landing Page',
+    summary:
+      'A prerendered landing page for a fictional team scheduling product, with a product mockup drawn in HTML and CSS, monthly/yearly pricing with a comparison table, testimonials, an accessible FAQ and a validated contact form. Scores 100 in all four Lighthouse categories.',
+    highlights: [
+      'Static prerendering with per-page SEO, Open Graph and JSON-LD',
+      'Pricing toggle with yearly discount and comparison table',
+      'Keyboard-friendly FAQ accordion and carousel',
+      'Validated contact form with sending and success states',
+    ],
+    tags: ['Angular 21', 'SSG', 'Signals', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/saas-landing-page/',
+    codeUrl: 'https://github.com/hkhodkar/saas-landing-page',
+    added: '2026-11-20',
+  },
+  {
     slug: 'file-upload-manager',
     title: 'File Upload Manager',
     summary:
