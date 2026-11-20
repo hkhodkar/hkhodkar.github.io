@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'markdown-notes',
+    title: 'Markdown Notes',
+    summary:
+      'A three-pane markdown notebook that lives in the browser: write with a toolbar and shortcuts, see a live, sanitized and syntax-highlighted preview, and organize notes with tags, pins and a trash. Notes can be imported and exported as .md files or a .zip.',
+    highlights: [
+      'Edit, split and preview modes with scroll sync',
+      'Instant search with highlighted matches',
+      'Tags with autocomplete, rename and counts',
+      'Autosave, undo delete and .md / .zip export',
+    ],
+    tags: ['Angular 21', 'Signals', 'Markdown', 'highlight.js'],
+    demoUrl: 'https://hkhodkar.github.io/markdown-notes/',
+    codeUrl: 'https://github.com/hkhodkar/markdown-notes',
+    added: '2026-11-20',
+  },
+  {
     slug: 'hr-leave-management',
     title: 'HR Leave Management',
     summary:
