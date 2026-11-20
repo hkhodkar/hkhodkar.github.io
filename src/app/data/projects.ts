@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'file-upload-manager',
+    title: 'File Upload Manager',
+    summary:
+      'A full-stack file manager with drag and drop uploads, three at a time, with per-file progress, cancel and retry. Files are checked in the browser and again on the server, then listed in a searchable library with image, PDF and CSV previews. The live demo keeps files in your browser.',
+    highlights: [
+      'Upload queue with progress, cancel, retry and paste',
+      'Type and size checks on client and server',
+      'Grid and list library with previews and bulk delete',
+      'Storage usage summary by file type',
+    ],
+    tags: ['Angular 21', 'Signals', 'FastAPI', 'SQLite', 'Docker'],
+    demoUrl: 'https://hkhodkar.github.io/file-upload-manager/',
+    codeUrl: 'https://github.com/hkhodkar/file-upload-manager',
+    added: '2026-11-20',
+  },
+  {
     slug: 'realtime-chat',
     title: 'Realtime Chat',
     summary:
