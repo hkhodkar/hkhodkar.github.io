@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'restaurant-ordering',
+    title: 'Restaurant Ordering',
+    summary:
+      "Online ordering for a fictional wood-fired restaurant. Customers pick sizes and extras, check out for delivery or pickup and follow their order live, while a kitchen board moves tickets along and syncs to the customer's tab.",
+    highlights: [
+      'Item options dialog with required choices and live price',
+      'Cart with tips, promo codes, tax and delivery fee',
+      'Checkout with conditional address fields and time slots',
+      'Kitchen board synced with the order tracker across tabs',
+    ],
+    tags: ['Angular 21', 'Signals', 'Reactive Forms', 'SCSS'],
+    demoUrl: 'https://hkhodkar.github.io/restaurant-ordering/',
+    codeUrl: 'https://github.com/hkhodkar/restaurant-ordering',
+    added: '2026-11-20',
+  },
+  {
     slug: 'url-shortener',
     title: 'URL Shortener',
     summary:
