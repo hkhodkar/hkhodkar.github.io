@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'realtime-chat',
+    title: 'Realtime Chat',
+    summary:
+      'A full-stack team chat with rooms, live presence and typing indicators over one WebSocket per room, backed by FastAPI and SQLite. The live demo runs a mock backend in the browser: open two tabs to chat between them, while two sample teammates type and reply.',
+    highlights: [
+      'Live messages, presence and typing over WebSockets',
+      'Reconnect with backoff and catch-up of missed messages',
+      'Scroll-up history loading with a new-messages pill',
+      'Mobile room drawer and online users list',
+    ],
+    tags: ['Angular 21', 'Signals', 'FastAPI', 'WebSockets', 'SQLite'],
+    demoUrl: 'https://hkhodkar.github.io/realtime-chat/',
+    codeUrl: 'https://github.com/hkhodkar/realtime-chat',
+    added: '2026-11-20',
+  },
+  {
     slug: 'job-board',
     title: 'Job Board',
     summary:
