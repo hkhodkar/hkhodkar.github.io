@@ -21,6 +21,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'hr-leave-management',
+    title: 'HR Leave Management',
+    summary:
+      'A full-stack leave app where employees book time off, managers approve their team and HR sees everyone, with balances counted in real working days. Switch between employee, manager and HR views to see the permissions change.',
+    highlights: [
+      'Request form with a live working-day count',
+      'Balance and overlap checks on client and server',
+      'Approve and reject flow with audit trail',
+      'Team calendar and dashboard with charts',
+    ],
+    tags: ['Angular 21', 'Signals', 'FastAPI', 'SQLite', 'Chart.js'],
+    demoUrl: 'https://hkhodkar.github.io/hr-leave-management/',
+    codeUrl: 'https://github.com/hkhodkar/hr-leave-management',
+    added: '2026-11-20',
+  },
+  {
     slug: 'restaurant-ordering',
     title: 'Restaurant Ordering',
     summary:
